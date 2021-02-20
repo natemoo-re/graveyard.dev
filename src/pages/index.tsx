@@ -1,6 +1,8 @@
 import { FunctionalComponent } from 'preact';
 import { definePage } from 'microsite/page';
 import { Head, seo } from 'microsite/head';
+import { Logo } from '@/components/Logo';
+import { Footer } from '@/components/Footer';
 
 interface IndexProps {}
 
@@ -15,10 +17,19 @@ const Index: FunctionalComponent<IndexProps> = () => {
       </Head>
 
       <main>
-        <h1>Welcome to Graveyard!</h1>
-        <p>
-          Ready to build something amazing? <a href="https://github.com/natemoo-re/microsite">Read the docs</a> to get started.
-        </p>
+        <div class="content">
+          <div class="logo">
+            <Logo />
+            <h1>Graveyard</h1>
+          </div>
+          <article>
+            <p>
+              Here lie <a class="link" href="https://twitter.com/n_moore">Nate</a>'s unfinished side projects, including this one.
+            </p>
+            <p>One day you might be able to rescue some of his neglected logos and/or domains... but not today.</p>
+          </article>
+          <Footer />
+        </div>
       </main>
     </>
   );
